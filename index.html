@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Barbie - jogo</title>
+  <link rel="stylesheet" href="barbie.css">
+</head>
+<body>
+
+
+  <div id="envoltorio">
+    
+    <div id="jogo">
+      <canvas id="fundo" width="900" height="450"></canvas>
+    
+      <img id="obstaculo" src="caixa.png" alt="">
+      <div id="recompensa">⭐</div>
+      <img id="jogadora" src="barbie.gif" alt="">
+
+      <div id="painel">
+        <span>⏱ <b id="tempo">60</b>s</span>
+        <span>⭐ <b id="pontuacao">0</b></span>
+      </div>
+
+      <div class="tela" id="tela-inicio">
+        <h1>Corrida na Praia</h1>
+        <p>Pule a caixa e pegue as estrelas!<br>Sobreviva 60 segundos.</p>
+        <p class="dica">Espaço / ↑ / toque para pular</p>
+        <button id="botao-iniciar">Jogar</button>
+      </div>
+
+      <div class="tela oculto" id="tela-fim">
+        <img id="imagem-fim" src="gameover.png" alt="Fim de jogo">
+        <h1 id="texto-fim" class="oculto">FIM DE JOGO</h1>
+        <img id="imagem-derrota" src="perdeu.gif" alt="">
+        <p>Pontos: <b id="pontuacao-final">0</b></p>
+        <button id="botao-tentar">Tentar de novo</button>
+      </div>
+
+      <div class="tela oculto" id="tela-vitoria">
+        <h1>Você venceu!</h1>
+        <p>Pontos: <b id="pontuacao-vitoria">0</b></p>
+        <button id="botao-novamente">Jogar de novo</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="barbie.js"></script>
+</body>
+</html>

@@ -1,0 +1,144 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #87ceeb;
+  font-family: "Trebuchet MS", Arial, sans-serif;
+}
+
+#envoltorio {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 900px;
+  height: 450px;
+  transform-origin: top left;
+}
+
+#jogo {
+  position: relative;
+  width: 900px;
+  height: 450px;
+  overflow: hidden;
+  background: #87ceeb;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+#fundo {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+#jogadora, #obstaculo, #recompensa {
+  position: absolute;
+  left: 0;
+  top: 0;
+  will-change: transform;
+}
+
+#jogadora {
+  width: 90px;
+  height: 120px;
+  object-fit: contain;
+  z-index: 3;
+}
+
+#obstaculo {
+  width: 70px;
+  height: 100px;
+  object-fit: contain;
+  z-index: 2;
+}
+
+#recompensa {
+  width: 44px;
+  height: 44px;
+  font-size: 38px;
+  line-height: 44px;
+  text-align: center;
+  z-index: 2;
+  filter: drop-shadow(0 0 6px #fff7);
+}
+
+#painel {
+  position: absolute;
+  top: 10px;
+  left: 14px;
+  right: 14px;
+  z-index: 5;
+  display: flex;
+  justify-content: space-between;
+  font-size: 24px;
+  color: #fff;
+  text-shadow: 0 2px 4px #0006;
+  pointer-events: none;
+}
+
+.tela {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  background: rgba(40, 10, 50, 0.72);
+  color: #fff;
+  text-align: center;
+}
+
+.tela h1 {
+  font-size: 44px;
+  color: #ffd1ea;
+  text-shadow: 0 3px 0 #ff4fa3;
+}
+
+.tela p {
+  font-size: 20px;
+}
+
+.tela .dica {
+  font-size: 15px;
+  opacity: .8;
+}
+
+.tela img {
+  max-width: 320px;
+  max-height: 150px;
+  object-fit: contain;
+}
+
+.oculto {
+  display: none !important;
+}
+
+button {
+  background: #ff4fa3;
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  padding: 12px 34px;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 0 #b8286f;
+}
+
+button:hover {
+  background: #ff6ab4;
+}
+
+button:active {
+  transform: translateY(3px);
+  box-shadow: 0 1px 0 #b8286f;
+}
